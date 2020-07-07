@@ -1,3 +1,5 @@
 create virtual environment
 -install django
 -install python-decouple
+
+store SECRET_KEY and DEBUG value in a seperate .env file in the root folder
