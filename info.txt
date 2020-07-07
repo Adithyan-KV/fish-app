@@ -1,0 +1,3 @@
+create virtual environment
+-install django
+-install python-decouple
