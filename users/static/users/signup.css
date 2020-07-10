@@ -1,0 +1,164 @@
+body{
+    margin:0px;
+    padding:0px;
+}
+
+.container{
+    height:100%;
+    width:100%;
+    overflow: hidden;
+    background-color:black;
+}
+
+img{
+    max-width: 100%;
+    max-height: auto;
+    overflow: hidden;
+}
+
+.top-bar{
+    height:10%;
+    width:100%;
+    position:fixed;
+/*    background-color:green;*/
+    display:flex;
+}
+
+@font-face{
+    font-family: 'Password Mask';
+    src: url('./fonts/password-font.ttf')
+}
+
+.button{
+    box-sizing: border-box;
+    height: 100%;
+    width : 7%;
+    text-align: center;
+/*    background-color: red;*/
+    color:#484854;
+    margin: 0px 10px;
+    padding-top: 1.5%;
+    font-size: 30px;
+    font-family: 'Saira Extra Condensed',sans-serif;
+}
+
+.button:hover,.currentb{
+    color:white;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.box{
+    font-family: 'Audrey', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 450px;
+    padding: 50px;
+    background-color: rgba(205,204,218,0.96);
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 25px rgba(255, 255, 255, .2);
+    z-index: 100
+}
+
+.box h1{
+    font-family: 'Roboto Slab', serif;
+    margin: 0 0 30px;
+    padding: 0;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.form-title{
+  font-family: 'Roboto Slab', serif;
+  margin: 0 0 30px;
+  padding: 0;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.box .inputbox{
+  position: relative;
+}
+
+.box .inputbox input{
+  width: 100%;
+  padding: 10px 0;
+  font-size: 13px;
+  margin-bottom: 30px;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  background: transparent;
+}
+
+.box .inputbox label{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 17px 0;
+  font-size: 11px;
+  color: black;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.box .inputbox input:focus ~ label,
+.box .inputbox input:valid ~ label{
+  top: -27px;
+  left: 0px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.box button{
+  border: 0.5px solid rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  background: transparent;
+  color: rgba(0, 0, 0, 0.8);;
+  height: 30px;
+  width: 50%;
+  text-align: center;
+  margin-left: 25%;
+  font-size: 18px;
+  font-weight: bold
+}
+
+.box button:hover{
+  border: 1px solid black;
+  cursor: pointer;
+  border-radius: 15px;
+  background: #33333C ;
+  color: white;
+}
+
+.box button:active{
+  border: 1px solid black;
+  cursor: pointer;
+  border-radius: 15px;
+  background: #33333C ;
+  color: white;
+}
+
+input[type="password"]{
+    font-family:"Password Mask",sans-serif;
+}
+
+@media only screen and (max-width: 600px) {
+    .button{
+        font-size:16px;
+    }
+
+    .button:hover{
+        font-size: 18px;
+    }
+
+    img{
+        max-width: 200%;
+        transform: translate(-25%,25%);
+    }
+
+}

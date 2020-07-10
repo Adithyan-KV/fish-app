@@ -1,0 +1,89 @@
+body{
+    margin:0px;
+    padding:0px;
+}
+
+.container{
+    height:100%;
+    width:100%;
+    overflow: hidden;
+    background-color:black;
+}
+
+img{
+    max-width: 100%;
+    max-height: auto;
+    overflow: hidden;
+}
+
+.top-bar{
+    height:10%;
+    width:100%;
+    position:fixed;
+/*    background-color:green;*/
+    display:flex;
+}
+
+.button{
+    box-sizing: border-box;
+    height: 100%;
+    width : 7%;
+    text-align: center;
+/*    background-color: red;*/
+    color:#484854;
+    margin: 0px 10px;
+    padding-top: 1.5%;
+    font-size: 30px;
+    font-family: 'Saira Extra Condensed',sans-serif;
+}
+
+.button:hover,.currentb{
+    color:white;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+.box{
+    font-family: 'Audrey', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 450px;
+    padding: 50px;
+    background-color: rgba(205,204,218,0.96);
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 25px rgba(255, 255, 255, .2);
+    z-index: 100
+}
+
+.message-head{
+    font-size: 30px;
+    font-weight:bold;
+}
+
+.message-body{
+    font-size:18px;
+}
+
+input[type="password"]{
+    font-family:"Password Mask",sans-serif;
+}
+
+@media only screen and (max-width: 600px) {
+    .button{
+        font-size:16px;
+    }
+
+    .button:hover{
+        font-size: 18px;
+    }
+
+    img{
+        max-width: 200%;
+        transform: translate(-25%,25%);
+    }
+
+}

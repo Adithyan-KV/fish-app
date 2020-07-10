@@ -1,5 +1,8 @@
 {% extends 'home_app/base.html'%}
 {% load static %}
+{% block styles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'home_app/main.css' %}">
+{% endblock %}
 {% block content %}
   <div class="hero_text">
     FISH ON!
