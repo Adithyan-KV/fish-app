@@ -66,7 +66,7 @@ img{
 
 .box h1{
     font-family: 'Roboto Slab', serif;
-    margin: 0 0 30px;
+    margin: 0 0 0.5em;
     padding: 0;
     text-align: center;
     color: rgba(0, 0, 0, 0.8);
@@ -80,39 +80,48 @@ img{
   color: rgba(0, 0, 0, 0.8);
 }
 
-.box .inputbox{
-  position: relative;
+.form-container{
+    border: none;
+    width:100%;
 }
 
-.box .inputbox input{
-  width: 100%;
-  padding: 10px 0;
-  font-size: 13px;
-  margin-bottom: 10px;
-  border: none;
-  border-bottom: 1px solid black;
-  outline: none;
-  background-color: transparent;
+/* all the input fields inside the form*/
+.form-container input{
+    width: 100%;
+    margin-bottom: 2em;
+    padding: 0.4em 0;
+    font-size: 13px;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    background-color: transparent;
 }
 
-.box .inputbox label{
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 17px 0;
-  font-size: 11px;
-  color: black;
-  pointer-events: none;
-  transition: 0.3s;
+/* the helptext class created by django inside {{form}} */
+.helptext{
+    /* display none for aesthetic purposes. can be changed later if deemed necessary */
+    display: none ;
+    padding : 1em;
+    font-size: 0.5em;
+    /* display: block; */
 }
 
-.box .inputbox input:focus ~ label,
-.box .inputbox input:valid ~ label{
-  top: -27px;
-  left: 0px;
-  font-size: 14px;
-  font-weight: bold;
-  background:transparent;
+
+/* all the requirements for the password that django gives */
+.helptext ul{
+    display:none;
+    transform: translateX(-10%);
+    color: #c2bb02;
+}
+
+/* errors that django raises
+password too weak, invalid characters in username etc. */
+.errorlist{
+    color:#e32929;
+    font-size: 0.5em;
+    /* can be toggled to add or remove bullets on the error list */
+    list-style-type: none;
+    padding: 0px;
 }
 
 .box button{
@@ -142,7 +151,7 @@ img{
   cursor: pointer;
   border-radius: 15px;
   background: #33333C ;
-  color: white;
+  color: red;
 }
 
 input[type="password"]{

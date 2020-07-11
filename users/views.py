@@ -11,9 +11,10 @@ def signup(request):
             messages.success(
                 request, f'Hi {username}, your account has been created. Go to the Login page to access your account')
             return redirect('home_page')
-        else:
-            error_list = form.error_messages
-            messages.error(request, f'Sorry {error_list} error happened')
+        # else:
+        #     error_list = form.error_messages
+        #     for error in error_list:
+        #         messages.error(request, f'Sorry {error_list} error happened')
     else:
         form = UserCreationForm()
     return render(request, 'users/signup_page.html', {'form': form})

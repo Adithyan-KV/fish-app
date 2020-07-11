@@ -7,44 +7,11 @@
     <div class="box">
         <h1>Sign up</h1>
         <form method="POST">
-            {% csrf_token %}
-            <div class="inputbox">
-                {{form.username}}
-                <label for="uname">Username</label>
+            <div class="form-container">
+                {% csrf_token %}
+                {{ form }}
+                <button type="submit">Sign Up</button>
             </div>
-            <div class="error-placeholder">
-
-            </div>
-            <div class="inputbox">
-                <input type="text" name="email" required>
-                <label for="email">Email ID</label>
-            </div>
-            <div class="error-placeholder">
-
-            </div>
-            <div class="inputbox">
-                {{form.password1}}
-                <label for="pw">Password</label>
-            </div>
-            <div class="error-placeholder">
-
-            </div>
-            <div class="inputbox">
-                {{form.password2}}
-                <label for="cpw">Confirm password</label>
-            </div>
-            {% if form.errors %}
-                <div class="error-messages">
-                    {%for error_message in form.error_messages.values %}
-                        {{error_message}}
-                    {% endfor %}
-                </div>
-            {% else %}
-                <div class="error-placeholder">
-
-                </div>
-            {% endif %}
-            <button type="submit">Sign Up</button>
         </form>
       </div>
         <div class="container">
