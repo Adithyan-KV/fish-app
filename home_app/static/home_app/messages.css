@@ -1,0 +1,38 @@
+.message{
+    position: absolute;
+    top: 80%;
+    left: 80%;
+    transform: translateX(-50%);
+    color: #c3ffbf;
+    width: 400px;
+    height: 100px;
+    vertical-align: middle;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 25px rgba(0, 0, 0, .2);
+    z-index: 100
+}
+
+.message-success{
+    background-color: rgba(110, 250, 102,0.2);
+}
+
+.message-error{
+    background-color: rgba(199, 24, 30,0.2);
+}
+
+.message-text{
+    font-family: 'Helvetica', sans-serif;
+    color:#c3ffbf;
+    margin: auto;
+    text-align: center;
+}
+
+.error-messages{
+    font-size:12;
+    color:red;
+}
+
+.error-placeholder{
+    height:15px;
+}

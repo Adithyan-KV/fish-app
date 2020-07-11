@@ -88,11 +88,11 @@ img{
   width: 100%;
   padding: 10px 0;
   font-size: 13px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   border: none;
   border-bottom: 1px solid black;
   outline: none;
-  background: transparent;
+  background-color: transparent;
 }
 
 .box .inputbox label{
@@ -112,6 +112,7 @@ img{
   left: 0px;
   font-size: 14px;
   font-weight: bold;
+  background:transparent;
 }
 
 .box button{
@@ -123,6 +124,7 @@ img{
   width: 50%;
   text-align: center;
   margin-left: 25%;
+  margin-top:10px;
   font-size: 18px;
   font-weight: bold
 }
