@@ -11,7 +11,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 17%;
+    width: 19%;
     min-width: 250px;
     /* height given as auto because the box may have to expand to account for error messages */
     height: auto;
@@ -26,8 +26,8 @@
 
 .box h1{
     font-family: 'Roboto Slab', serif;
-    font-size: 1.8em;
-    margin: 0 0 0.7em;
+    font-size: 2em;
+    margin: 0 0 1em;
     padding: 0;
     text-align: center;
     color: rgba(0, 0, 0, 0.8);
@@ -46,47 +46,53 @@
     width:100%;
 }
 
-/* all the input fields inside the form*/
-.form-container input{
+.field-item{
+    margin-bottom:1.3em;
+}
+
+.field-label{
+    font-size:0.8em;
+    color: #4f4f4f;
+    margin-bottom: 0.2em;
+}
+
+.field-label span{
+    color:red;
+}
+
+/* input fields inside the form */
+.field input{
     width: 100%;
-    margin-bottom: 1.5em;
     padding: 0.3em 0;
     font-size: 13px;
     border: none;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #6b6b6b;
     outline: none;
     background-color: transparent;
 }
 
-.form-container label{
-    font-size: 0.7em;
-}
-
-/* the helptext class created by django inside {{form}} */
-.helptext{
-    /* display none for aesthetic purposes. can be changed later if deemed necessary */
-    display: none ;
-    padding : 1em;
-    font-size: 0.5em;
-    /* display: block; */
+/* input fields when django raises an error, highlighted in red */
+.is-invalid input{
+    background-color:rgba(255,0,0,0.05);
+    border-bottom: 1px solid red;
 }
 
 
-/* all the requirements for the password that django gives */
-.helptext ul{
-    display:none;
-    transform: translateX(-10%);
-    color: #c2bb02;
+.field input:focus{
+    border-bottom: 1px solid #028ea1;
+    background-color: transparent;
 }
 
-/* errors that django raises
-password too weak, invalid characters in username etc. */
-.errorlist{
-    color:#e32929;
-    font-size: 0.5em;
-    /* can be toggled to add or remove bullets on the error list */
+/*errors django will raise in case of invalid inputs*/
+.errors{
+    color:red;
+    font-size: 0.6em;
+    font-weight: bold;
+}
+
+.errors ul{
+    padding:0px;
     list-style-type: none;
-    padding: 0px;
 }
 
 .box button{

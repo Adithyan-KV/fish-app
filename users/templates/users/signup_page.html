@@ -10,24 +10,26 @@
             <div class="form-container">
                 {% csrf_token %}
 
-                <!-- prints out the form field by field -->
-                {% for field in form %}
-                    <div class="field-label">
-                        {{field.label}}
-                        <!-- print an asterix for required fields -->
-                        {% if not field.required %}<span>*</span>{% endif %}
-                    </div>
+                    <!-- prints out the form field by field -->
+                    {% for field in form %}
+                        <div class="field-item">
+                            <div class="field-label">
+                                {{field.label}}
+                                <!-- print an asterix for required fields -->
+                                {% if not field.required %}<span>*</span>{% endif %}
+                            </div>
 
-                    <!-- adds an "is-invalid" class to the div if the field had an error in it, so that it can be given error styling-->
-                    <div class="field  {% if field.errors %}is-invalid{% endif %}">
-                        {{field}}
-                    </div>
+                            <!-- adds an "is-invalid" class to the div if the field had an error in it, so that it can be given error styling-->
+                            <div class="field  {% if field.errors %}is-invalid{% endif %}">
+                                {{field}}
+                            </div>
 
-                    <!-- prints out any errors that occured in the field due to invalid inputs -->
-                    <div class="errors">
-                        {{field.errors}}
-                    </div>
-                {% endfor %}
+                            <!-- prints out any errors that occured in the field due to invalid inputs -->
+                            <div class="errors">
+                                {{field.errors}}
+                            </div>
+                        </div>
+                    {% endfor %}
             </div>
             <button type="submit">Sign Up</button>
         </form>
