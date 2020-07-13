@@ -1,5 +1,6 @@
 create virtual environment
--install django
--install python-decouple
+-install django (obvious purposes)
+-install python-decouple (for storing and linking secret key seperately from stuff that'll be uploaded to github)
+-install django-crispy-forms (for styling forms properly)
 
 store SECRET_KEY and DEBUG value in a seperate .env file in the root folder
