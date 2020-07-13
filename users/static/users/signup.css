@@ -1,51 +1,7 @@
-body{
-    margin:0px;
-    padding:0px;
-}
-
-.container{
-    height:100%;
-    width:100%;
-    overflow: hidden;
-    background-color:black;
-}
-
-img{
-    max-width: 100%;
-    max-height: auto;
-    overflow: hidden;
-}
-
-.top-bar{
-    height:10%;
-    width:100%;
-    position:fixed;
-/*    background-color:green;*/
-    display:flex;
-}
-
+/* cusotm font where password masking characters have been replaced with spade glyphs, for the password field*/
 @font-face{
     font-family: 'Password Mask';
     src: url('./fonts/password-font.ttf')
-}
-
-.button{
-    box-sizing: border-box;
-    height: 100%;
-    width : 7%;
-    text-align: center;
-/*    background-color: red;*/
-    color:#484854;
-    margin: 0px 10px;
-    padding-top: 1.5%;
-    font-size: 30px;
-    font-family: 'Saira Extra Condensed',sans-serif;
-}
-
-.button:hover,.currentb{
-    color:white;
-    font-size: 32px;
-    cursor: pointer;
 }
 
 /* ToDo: Have to implement it so that aspect ratio remains constant on resizing window*/
@@ -184,23 +140,10 @@ input[type="password"]{
     .button:hover{
         font-size: 18px;
     }
-
-    img{
-        max-width: 200%;
-        transform: translate(-25%,25%);
-    }
-
 }
 
 /* for 1440p or similar resolution monitors*/
 @media only screen and (min-width: 2000px){
-  img{
-      width:100vw;
-      max-width: none;
-      max-height: none;
-      overflow: hidden;
-  }
-
   .box{
       height:auto;
       min-height: 600px;
@@ -221,13 +164,6 @@ input[type="password"]{
 
 /* for 4k or similar resolution monitors*/
 @media only screen and (min-width: 3000px){
-  img{
-      width:100vw;
-      max-width: none;
-      max-height: none;
-      overflow: hidden;
-  }
-
   .box{
       height:auto;
       min-height: 900px;

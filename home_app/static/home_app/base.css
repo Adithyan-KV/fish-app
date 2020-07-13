@@ -41,24 +41,49 @@ img{
     font-size: 32px;
 }
 
-.hero_text{
-    margin-top:50vh;
-    margin-left:50vw;
-    transform: translate(-50%,-50%);
-    position: fixed;
-    color:white;
-    font-family: 'Francois One',sans-serif;
-    font-size: 100px;
-    z-index: 100;
-    text-shadow: 10px 10px 20px #000000;
+/* flash message box pops up at bottom right corner of page*/
+.message{
+    position: absolute;
+    top: 80%;
+    left: 85%;
+    transform: translateX(-50%);
+    color: #c3ffbf;
+    width: 400px;
+    height: 80px;
+    vertical-align: middle;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 25px rgba(0, 0, 0, .2);
+    z-index: 100
 }
+
+.message-success{
+    background-color: rgba(110, 250, 102,0.2);
+    border: solid 1px #0c8c00;
+}
+
+
+/* Used for debugging purposes. not part of final styles */
+/* .message-error{
+    display: none;
+    background-color: rgba(199, 24, 30,0.2);
+} */
+
+.message-text{
+    font-family: 'Helvetica', sans-serif;
+    color:#c3ffbf;
+    padding: 5%;
+    text-align: center;
+}
+
+/* Used for debugging purposes. not part of final styles */
+/* .error-messages{
+    font-size:12;
+    color:red;
+} */
 
 /* for mobile devices*/
 @media only screen and (max-width: 600px) {
-
-    .hero_text{
-        font-size:48px;
-    }
 
     .button{
         font-size:16px;
@@ -84,10 +109,6 @@ img{
       overflow: hidden;
   }
 
-  .hero_text{
-    font-size:150px;
-  }
-
   .button{
       font-size:50px;
   }
@@ -95,8 +116,6 @@ img{
   .button:hover{
       font-size: 60px;
   }
-
-
 }
 
 /* for 4k or similar resolution monitors*/
@@ -108,10 +127,6 @@ img{
       overflow: hidden;
   }
 
-  .hero_text{
-    font-size:250px;
-  }
-
   .button{
       font-size:90px;
   }
@@ -119,6 +134,4 @@ img{
   .button:hover{
       font-size: 100px;
   }
-
-
 }
