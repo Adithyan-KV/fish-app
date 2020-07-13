@@ -12,9 +12,21 @@
     </head>
     <body>
         <div class = "top-bar">
-            <div class = "button">Home</div>
-            <div class = "button">Host</div>
-            <div class = "button">Join</div>
+            <a href='{% url 'home_page' %}'>
+                <div class = "button">Home</div>
+            </a>
+            <a href='#'>
+                <div class = "button">Host</div>
+            </a>
+            <a href='#'>
+                <div class = "button">Join</div>
+            </a>
+            <a href='{% url 'signup_page' %}'>
+                <div class="leftbutton">&nbsp&nbspSign&nbspUp&nbsp&nbsp</div>
+            </a>
+            <a href='#'>
+                <div class="leftbutton leftbutton2">&nbsp&nbspSign&nbspIn&nbsp&nbsp</div>
+            </a>
         </div>
         {% if messages %}
             {% for message in messages%}

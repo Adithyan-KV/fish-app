@@ -23,6 +23,11 @@ img{
     display:flex;
 }
 
+.top-bar a{
+    padding: 2em;
+    text-decoration:none;
+}
+
 .button{
     box-sizing: border-box;
     height: 100%;
@@ -39,6 +44,36 @@ img{
     cursor: pointer;
     color:white;
     font-size: 32px;
+}
+
+.leftbutton{
+    display:block;
+    text-align: center;
+    box-sizing: border-box;
+    color: white;
+    background-color: black;
+    position: absolute;
+    right:0;
+    width: min-content;
+    border-radius: 30px;
+    border: 1px solid white;
+    background-clip: padding-box;
+    height: min-content;
+    margin-right: 1em;
+    padding: 0.1em 0.3em 0.1em 0.3em;
+    font-size: 1.3em;
+    font-family: 'Helvetica',sans-serif;
+}
+
+.leftbutton:hover, .currentlb{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+
+}
+
+.leftbutton2{
+    right: 6em;
 }
 
 /* flash message box pops up at bottom right corner of page*/
@@ -116,6 +151,10 @@ img{
   .button:hover{
       font-size: 60px;
   }
+
+  .leftbutton{
+      font-size:2em;
+  }
 }
 
 /* for 4k or similar resolution monitors*/
@@ -133,5 +172,10 @@ img{
 
   .button:hover{
       font-size: 100px;
+  }
+
+  .leftbutton{
+      font-size:4em;
+      border-radius:2em;
   }
 }
