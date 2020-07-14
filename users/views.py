@@ -1,5 +1,4 @@
 from django.shortcuts import render, redirect
-from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from .forms import SignUpForm
 
@@ -13,8 +12,8 @@ def signup(request):
             messages.success(
                 request, f'Hi {username.capitalize()}!,'
                 ' your account has been created.'
-                ' Go to the Login page to access your account')
-            return redirect('home_page')
+                ' You can now Log in')
+            return redirect('login_page')
         # else:
         #     error_list = form.error_messages
         #     for error in error_list:

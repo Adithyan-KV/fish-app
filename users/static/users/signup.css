@@ -24,6 +24,21 @@
     z-index: 100
 }
 
+#signin{
+    padding: 4% 3%;
+}
+
+.redirect-text{
+    font-size: 0.8em;
+    font-family: Helvetica,sans-serif;
+    color: #757575;
+    margin-top: 1em;
+}
+
+.redirect-text a{
+    color:#5e7bad;
+}
+
 .box h1{
     font-family: 'Roboto Slab', serif;
     font-size: 2em;

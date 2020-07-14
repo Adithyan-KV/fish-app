@@ -1,0 +1,13 @@
+{% extends 'home_app/base.html' %}
+{% load static %}
+{% block styles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'users/signup.css' %}">
+{% endblock %}
+{% block content %}
+    <div class="box">
+        <h1>Logged out</h1>
+        <p>You have logged out.</p>
+        <p>Log back in, <a href='{% url 'login_page' %}'>Log In</a></p>
+    </div>
+    </body>
+{% endblock %}
