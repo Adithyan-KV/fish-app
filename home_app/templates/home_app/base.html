@@ -21,12 +21,24 @@
             <a href='#'>
                 <div class = "button">Join</div>
             </a>
+            <!-- only show login and signup pages if the user isn't already logged in -->
+            {% if user.is_authenticated %}
+            <div class="nametag">
+                <div class="dp">
+
+                </div>
+                <div class="username">
+                    {{user}}
+                </div>
+            </div>
+            {% else %}
             <a href='{% url 'signup_page' %}'>
                 <div class="leftbutton">&nbsp&nbspSign&nbspUp&nbsp&nbsp</div>
             </a>
             <a href='{% url 'login_page' %}'>
                 <div class="leftbutton leftbutton2">&nbsp&nbspSign&nbspIn&nbsp&nbsp</div>
             </a>
+            {% endif %}
         </div>
         {% if messages %}
             {% for message in messages%}

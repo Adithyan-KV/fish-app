@@ -69,13 +69,41 @@ img{
     cursor: pointer;
     background-color: white;
     color: black;
-
 }
 
 .leftbutton2{
     right: 6em;
 }
 
+.nametag{
+    box-sizing: border-box;
+    height: 100%;
+    width : 10%;
+    text-align: center;
+    color:#484854;
+    font-size: 1.5em;
+    font-family: 'Saira Extra Condensed',sans-serif;
+    /* background-color: green; */
+    position: absolute;
+    right:0;
+}
+
+.dp{
+    transform: translateY(35%);
+    display:inline-block;
+    height:2em;
+    width:2em;
+    border-radius:50%;
+    background-color:red;
+}
+
+.username{
+    display: inline-block;
+    height: auto;
+    margin:auto;
+    /* background-color:blue; */
+    text-align: center;
+}
 /* flash message box pops up at bottom right corner of page*/
 .message{
     position: absolute;

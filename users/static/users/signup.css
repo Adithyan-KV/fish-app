@@ -24,6 +24,8 @@
     z-index: 100
 }
 
+
+/* applies to box of signin page */
 #signin{
     padding: 4% 3%;
 }
@@ -100,7 +102,7 @@
 
 /*errors django will raise in case of invalid inputs*/
 .errors{
-    color:red;
+    color:#cc3535;
     font-size: 0.6em;
     font-weight: bold;
 }

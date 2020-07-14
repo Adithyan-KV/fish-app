@@ -1,0 +1,12 @@
+{% extends 'home_app/base.html' %}
+{% load static %}
+{% block styles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'users/signup.css' %}">
+{% endblock %}
+{% block content %}
+    <div class="box">
+        <h1>{{username}}</h1>
+        <p>Profile goes here</p>
+    </div>
+    </body>
+{% endblock %}
