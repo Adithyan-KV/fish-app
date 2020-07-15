@@ -41,6 +41,16 @@
     color:#5e7bad;
 }
 
+#logout-box p{
+    font-size: 1em;
+    font-family: Helvetica,sans-serif;
+    color: #757575;
+}
+
+#logoout-box a{
+    font-size:1.2em;
+}
+
 .box h1{
     font-family: 'Roboto Slab', serif;
     font-size: 2em;

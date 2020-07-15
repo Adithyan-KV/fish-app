@@ -4,10 +4,10 @@
     <link rel="stylesheet" type="text/css" href="{% static 'users/signup.css' %}">
 {% endblock %}
 {% block content %}
-    <div class="box">
+    <div class="box" id="logout-box">
         <h1>Logged out</h1>
         <p>You have logged out.</p>
-        <p>Log back in, <a href='{% url 'login_page' %}'>Log In</a></p>
+        <p>Log back in, <span class=redirect-text><a href='{% url 'login_page' %}'>Log In</a></span></p>
     </div>
     </body>
 {% endblock %}

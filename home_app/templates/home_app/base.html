@@ -25,10 +25,15 @@
             {% if user.is_authenticated %}
             <div class="nametag">
                 <div class="dp">
-
+                    image
                 </div>
                 <div class="username">
                     {{user}}
+                </div>
+                <div class="dropdown-content">
+                    <div class='elt'><a href="{% url 'profile_page' %}">Profile</a></div>
+                    <div class='elt'><a href="#">Settings</a></div>
+                    <div class='elt'><a href="{% url 'logout_page'%}">Sign out</a></div>
                 </div>
             </div>
             {% else %}
