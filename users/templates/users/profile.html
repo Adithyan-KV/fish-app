@@ -1,12 +1,16 @@
 {% extends 'home_app/base.html' %}
 {% load static %}
 {% block styles %}
-    <link rel="stylesheet" type="text/css" href="{% static 'users/signup.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'users/profile.css' %}">
 {% endblock %}
 {% block content %}
     <div class="box">
-        <h1>{{username}}</h1>
-        <p>Profile goes here</p>
+        <div class="profile-picture"></div>
+        <h1>{{user}}</h1>
+        <h2>{{user.email}}</h2>
+        <p>
+            Some random about me text goes here. I am very very nice person yada yada yada.
+        </p>
     </div>
     </body>
 {% endblock %}

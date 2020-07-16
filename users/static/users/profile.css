@@ -1,0 +1,86 @@
+/* ToDo: Have to implement it so that aspect ratio remains constant on resizing window*/
+.box{
+    font-family: 'Audrey', sans-serif;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 19%;
+    min-width: 250px;
+    /* height given as auto because the box may have to expand to account for error messages */
+    height: auto;
+    min-height: 400px;
+    padding: 2% 3% 1% 3%;
+    background-color: rgba(205,204,218,0.96);
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 25px rgba(255, 255, 255, .2);
+    z-index: 100
+}
+
+.box h1{
+    font-family: 'Helvetica',sans-serif;
+    font-size: 2em;
+    margin: 0.5em 0em;
+    padding: 0;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.8);
+}
+
+.box h2{
+    font-family: 'Helvetica',sans-serif;
+    font-size: 1em;
+    margin: 0.5em 0em;
+    padding: 0;
+    text-align: left;
+    color: #8f8f8f;
+    font-weight: normal;
+}
+
+.box p{
+    font-family: 'Helvetica',sans-serif;
+    font-size: 0.8em;
+    margin: 0.5em 0em;
+    padding: 0;
+    text-align: left;
+    color: #5e5e5e;
+    font-weight: normal;
+}
+
+.profile-picture{
+    opacity:90%;
+    width: 90%;
+    padding-top:90%;
+    height: 0;
+    background-color: green;
+    border-radius: 50%;
+    /*temperory image will be replaced by template image later*/
+    background-image: url('./images/person-prof.jfif');
+    background-size:contain;
+    background-repeat: no-repeat;
+    margin:auto;
+}
+
+@media only screen and (max-width: 600px) {
+    .box{
+        min-height:65%;
+        height: auto;
+        width:80%;
+        padding: 10%;
+    }
+
+/* for 1440p or similar resolution monitors*/
+@media only screen and (min-width: 2000px){
+  .box{
+      height:auto;
+      min-height: 600px;
+  }
+}
+
+/* for 4k or similar resolution monitors*/
+@media only screen and (min-width: 3000px){
+  .box{
+      height:auto;
+      min-height: 900px;
+  }
+}
