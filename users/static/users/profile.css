@@ -47,26 +47,38 @@
     font-weight: normal;
 }
 
-.profile-picture{
+/* .profile-picture{
     opacity:90%;
     width: 90%;
     padding-top:90%;
     height: 0;
     background-color: green;
     border-radius: 50%;
-    /*temperory image will be replaced by template image later*/
-    background-image: url('./images/person-prof.jfif');
     background-size:contain;
     background-repeat: no-repeat;
     margin:auto;
+} */
+
+.profile-picture img{
+    height: 10em;
+    border-radius: 50%;
+    margin:0px auto;
 }
 
 @media only screen and (max-width: 600px) {
     .box{
+        display: flex;
+        flex-direction: column;
         min-height:65%;
         height: auto;
         width:80%;
         padding: 10%;
+    }
+
+    .profile-picture img{
+        height:20vh;
+        width:20vh;
+        margin:0px 5em;
     }
 
 /* for 1440p or similar resolution monitors*/
